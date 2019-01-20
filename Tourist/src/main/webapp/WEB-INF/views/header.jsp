@@ -22,7 +22,8 @@ function getArea(areaPage){
 			});
 			if(areaPage===1){
 			str+="<option value='nextSel1'>다음</option>";
-			}else{
+			}
+			else{
 				str+="<option value='perSel1'>이전</option>";
 			}
 			
@@ -159,12 +160,6 @@ function typeSelect(){
 				<label id="sel3ra">타입</label> 
 
 			</div>
-		</div>
-		
-
-		<div class="col-lg-10 mx-auto">
-			<input class="form-control" type="text" id="formGroupInputLarge" name="keyword"
-				placeholder="가고싶은 관광지 키워드 검색">
 		</div>
 		<div class="col-lg-10 mx-auto">
 			<input type="submit" class="btn btn-danger btn-block" value="검색">

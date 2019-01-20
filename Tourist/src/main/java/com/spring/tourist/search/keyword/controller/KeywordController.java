@@ -1,5 +1,7 @@
 package com.spring.tourist.search.keyword.controller;
 
+import java.util.Map;
+
 import org.json.simple.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,11 +43,21 @@ public class KeywordController {
 	public String searchList(@RequestParam(value="areaSelect",required=false,defaultValue="sel")String areaCode,
 			@RequestParam(value="districtSelect",required=false,defaultValue="sel")String sigunguCode,
 			@RequestParam(value="typeSelect",required=false,defaultValue="sel")String cart1,
-			@RequestParam(value="keyword",required=false,defaultValue="")String keyword,Model model
+			Model model,@RequestParam(value="pageNo",required=false,defaultValue="1")int pageNo
 			) throws Exception{
-		
-		model.addAttribute("list",keywordService.searchList(areaCode,sigunguCode,cart1,keyword));	
+		Map<String, Object> map=keywordService.searchList(areaCode,sigunguCode,cart1,pageNo);
+		map.put("areaSelect",areaCode);
+		map.put("districtSelect", sigunguCode);
+		map.put("typeSelect",cart1);
+		model.addAttribute("map",map);
 		return "search/list";
 		
 	}
+	
+	@RequestMapping("/getDetail")
+	public String getDetail (@RequestParam(value="contentId")int contentId,Model model) throws Exception{
+	model.addAttribute("detailObj",keywordService.getDatail(contentId));
+	return "search/detail";
+	}
 }
+

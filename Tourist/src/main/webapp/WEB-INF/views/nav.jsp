@@ -16,10 +16,10 @@
 <title>Tourist</title>
 
 <!-- Bootstrap core CSS -->
-<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="${path}/resources/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
-<link href="resources/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="${path}/resources/css/all.min.css" rel="stylesheet" type="text/css">
 <link
 	href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
 	rel='stylesheet' type='text/css'>
@@ -28,14 +28,16 @@
 	rel='stylesheet' type='text/css'>
 
 <!-- Plugin CSS -->
-<link href="resources/css/magnific-popup.css" rel="stylesheet">
+<link href="${path}/resources/css/magnific-popup.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="resources/css/creative.min.css" rel="stylesheet">
+<link href="${path}/resources/css/creative.min.css" rel="stylesheet">
 <!-- Google Map Key -->
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
 </head>
 <body id="page-top">
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:black;">
